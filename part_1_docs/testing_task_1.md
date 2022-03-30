@@ -16,26 +16,29 @@ Only comment on errors that would stop the tests running.
 
 class CardGame:
 
+  # "__init__" method not created for class
 
   def check_for_ace(self, card):
-    if card.value = 1:
+    # Python requires == (double equals) to be used for a comparison operator
+    # = (single equal) is used for assignment
+    if card.value = 1: 
       return True
-    else
+    else # The : (colon ) operator is missing from the else statement
       return False
    
 
-  dif highest_card(self, card1 card2):
+  dif highest_card(self, card1 card2): 
+  # function created using dif, not def
+  # no comma between card1 and card2 parameters
   if card1.value > card2.value:
-    return card
+    return card # card variable has not been created, so cannot be returned
   else:
     return card2
   
 
 
 def cards_total(self, cards):
-  total
+  total # total variable has not been defined here
   for card in cards:
     total += card.value
-    return "You have a total of" + total
-  
-```
+    return "You have a total of" + total # Cannot concatenate a string to an int
