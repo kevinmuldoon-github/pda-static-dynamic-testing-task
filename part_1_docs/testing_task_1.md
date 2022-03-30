@@ -20,7 +20,7 @@ class CardGame:
 
   def check_for_ace(self, card):
     # Python requires == (double equals) to be used for a comparison operator
-    # = (single equal) is used for assignment
+    # = (single equal) is used for assignment, not comparisons/conditionals
     if card.value = 1: 
       return True
     else # The : (colon ) operator is missing from the else statement
@@ -30,15 +30,20 @@ class CardGame:
   dif highest_card(self, card1 card2): 
   # function created using dif, not def
   # no comma between card1 and card2 parameters
-  if card1.value > card2.value:
-    return card # card variable has not been created, so cannot be returned
-  else:
-    return card2
+    if card1.value > card2.value: # if statement needs to be indented correctly
+      return card # This should be card1, not card
+    else:
+      return card2
   
 
 
-def cards_total(self, cards):
-  total # total variable has not been defined here
+def cards_total(self, cards): # function should be indented
+  total # total variable has not been defined here - Should be assigned to 0
   for card in cards:
     total += card.value
-    return "You have a total of" + total # Cannot concatenate a string to an int
+    return "You have a total of" + total  
+    # Return statement is indented so is within the for loop
+    # Needs to be placed outside of for loop
+    # Cannot concatenate a string to an int, so this format will cause an error
+    # Quickest fix is to convert total to a string for display purposes
+    # Another option is to display total in the string using f-string
